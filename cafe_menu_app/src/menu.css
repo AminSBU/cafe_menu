@@ -1,0 +1,27 @@
+/* src/Menu.css */  
+.menu-container {  
+    display: flex;  
+    align-items: center;  
+    background-color: #ffcc00; /* Similar to image background */  
+    padding: 10px;  
+    border-radius: 5px;  
+}  
+
+.menu-item {  
+    display: flex;  
+    align-items: center;  
+    margin: 0 10px;  
+    cursor: pointer;  
+}  
+
+.icon {  
+    font-size: 24px;  
+    margin-right: 5px;  
+}  
+
+.arrow {  
+    cursor: pointer;  
+    font-size: 24px;  
+    margin: 0 10px;  
+    user-select: none; /* Prevents text selection */  
+}  
