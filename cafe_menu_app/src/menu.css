@@ -57,11 +57,11 @@
     padding: 0; /* optional: adjust if needed */  
   }  
   
-  .no-border .inner-column {  
+ .no-border .inner-column {  
     display: inline-block; /* side by side */  
     width: 50%;           /* half each */  
     text-align: center;   /* center text */  
     padding: 8px 0;       /* vertical padding */  
     box-sizing: border-box;  
     /* No border here */  
-  } 
+} 
