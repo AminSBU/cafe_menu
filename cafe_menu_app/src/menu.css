@@ -25,3 +25,43 @@
     margin: 0 10px;  
     user-select: none; /* Prevents text selection */  
 }  
+ 
+.menu-list{
+    display: flex;       /* side-by-side */  
+    border: 1px solid #ccc;  
+    margin-top: 10px;
+}
+
+.column {  
+  flex: 1;             /* equal width */  
+  padding: 10px;  
+  border: 1px solid #ddd;  
+  box-sizing: border-box;  
+  text-align: center;  /* optional: center text */  
+} 
+
+.row {  
+    border: 1px solid #888;  
+    padding: 8px;  
+    margin-bottom: 8px;  
+    text-align: center;  
+    background-color: #f9f9f9;  
+  }  
+  /* Optional: Remove margin from the last row */  
+  .row:last-child {  
+    margin-bottom: 0;  
+  }  
+
+  .no-border {  
+    border: none;  
+    padding: 0; /* optional: adjust if needed */  
+  }  
+  
+  .no-border .inner-column {  
+    display: inline-block; /* side by side */  
+    width: 50%;           /* half each */  
+    text-align: center;   /* center text */  
+    padding: 8px 0;       /* vertical padding */  
+    box-sizing: border-box;  
+    /* No border here */  
+  } 
