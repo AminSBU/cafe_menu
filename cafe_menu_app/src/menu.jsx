@@ -33,7 +33,10 @@ const Menu = () => {
                         </div>  
                     </div>  
                     <div class="row">
-                        Row 2 in Column 1
+                        <div className="row no-border">  
+                            <div className="inner-column"><img src='./src/img/Mooka-cafe.jpeg'></img></div>  
+                            <div className="inner-column">موکا: فوم شیر، شیر داغ، اسپرسو، سس شکلات</div>  
+                        </div>
                     </div>  
                     <div class="row">
                         Row 3 in Column 1
@@ -46,11 +49,27 @@ const Menu = () => {
                     </div>  
                 </div>  
                 <div className='column'>
-                    <div class="row">Row 1 in Column 2</div>  
-                    <div class="row">Row 2 in Column 2</div>  
-                    <div class="row">Row 3 in Column 2</div>  
-                    <div class="row">Row 4 in Column 2</div>  
-                    <div class="row">Row 5 in Column 2</div>  
+                <div class="row">
+                        <div className="row no-border">  
+                            <div className="inner-column"><img src='./src/img/makiato-cafe.jpeg'></img></div>  
+                            <div className="inner-column">ماکیاتو: قوه اسپرسو، شیر کف داده</div>  
+                        </div>  
+                    </div>  
+                    <div class="row">
+                        <div className="row no-border">  
+                            <div className="inner-column"><img src='./src/img/Mooka-cafe.jpeg'></img></div>  
+                            <div className="inner-column">موکا: فوم شیر، شیر داغ، اسپرسو، سس شکلات</div>  
+                        </div>
+                    </div>  
+                    <div class="row">
+                        Row 3 in Column 1
+                    </div>  
+                    <div class="row">
+                        Row 4 in Column 1
+                    </div>  
+                    <div class="row">
+                        Row 5 in Column 1
+                    </div>    
                 </div>
             </div>
         </>
