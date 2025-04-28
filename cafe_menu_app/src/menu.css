@@ -73,4 +73,24 @@
 img {  
   max-width: 100%;   /* Ensure images are responsive */  
   height: auto;      /* Keep aspect ratio */  
+}
+
+@media (max-width: 768px) {  
+  .menu-container {  
+      justify-content: space-around;  
+      padding: 5px;  
+  }  
+  
+  .menu-item {  
+      margin: 5px;  
+  }  
+
+  .column {  
+      flex: 1 1 100%; /* Full-width columns on small screens */  
+      padding: 5px;  
+  }  
+
+  .arrow {  
+      font-size: 20px;  
+  }  
 }  
