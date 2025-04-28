@@ -1,67 +1,76 @@
 /* src/Menu.css */  
+
 .menu-container {  
-    display: flex;  
-    align-items: center;  
-    background-color: #ffcc00; /* Similar to image background */  
-    padding: 10px;  
-    border-radius: 5px;  
+  display: flex;  
+  align-items: center;  
+  background-color: #ffcc00;  
+  padding: 10px;  
+  border-radius: 5px;  
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */  
 }  
 
 .menu-item {  
-    display: flex;  
-    align-items: center;  
-    margin: 0 10px;  
-    cursor: pointer;  
+  display: flex;  
+  align-items: center;  
+  margin: 0 10px;  
+  cursor: pointer;  
 }  
 
 .icon {  
-    font-size: 24px;  
-    margin-right: 5px;  
+  font-size: 24px;  
+  margin-right: 5px;  
 }  
 
 .arrow {  
-    cursor: pointer;  
-    font-size: 24px;  
-    margin: 0 10px;  
-    user-select: none; /* Prevents text selection */  
+  cursor: pointer;  
+  font-size: 24px;  
+  margin: 0 10px;  
+  user-select: none;  
 }  
- 
-.menu-list{
-    display: flex;       /* side-by-side */  
-    border: 1px solid #ccc;  
-    margin-top: 10px;
-}
 
+.menu-list {  
+  display: flex;        
+  flex-wrap: wrap;     /* Allow wrapping for smaller screens */  
+  border: 1px solid #ccc;  
+  margin-top: 10px;  
+}  
+
+/* Responsive columns: stack vertically on smaller screens */  
 .column {  
-  flex: 1;             /* equal width */  
+  flex: 1;    
+  min-width: 250px;   /* Minimum width for columns */  
   padding: 10px;  
   border: 1px solid #ddd;  
   box-sizing: border-box;  
-  text-align: center;  /* optional: center text */  
-} 
+  text-align: center;  
+}   
 
 .row {  
-    border: 1px solid #888;  
-    padding: 8px;  
-    margin-bottom: 8px;  
-    text-align: center;  
-    background-color: #f9f9f9;  
-  }  
-  /* Optional: Remove margin from the last row */  
-  .row:last-child {  
-    margin-bottom: 0;  
-  }  
+  border: 1px solid #888;  
+  padding: 8px;  
+  margin-bottom: 8px;  
+  text-align: center;  
+  background-color: #f9f9f9;  
+}  
 
-  .no-border {  
-    border: none;  
-    padding: 0; /* optional: adjust if needed */  
-  }  
-  
- .no-border .inner-column {  
-    display: inline-block; /* side by side */  
-    width: 50%;           /* half each */  
-    text-align: center;   /* center text */  
-    padding: 8px 0;       /* vertical padding */  
-    box-sizing: border-box;  
-    /* No border here */  
-} 
+.row:last-child {  
+  margin-bottom: 0;  
+}  
+
+.no-border {  
+  border: none;  
+  padding: 0;  
+}  
+
+.no-border .inner-column {  
+  display: inline-block;   
+  width: 50%;        
+  text-align: center;  
+  padding: 8px 0;   
+  box-sizing: border-box;  
+}   
+
+img {  
+  max-width: 100%;   /* Ensure images are responsive */  
+  height: auto;      /* Keep aspect ratio */  
+}  
