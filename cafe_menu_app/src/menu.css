@@ -75,6 +75,12 @@ img {
   height: auto;      /* Keep aspect ratio */  
 }
 
+.addCardButton{
+  border-radius: 20px;
+  background-color: rgb(30, 83, 83);
+  color: white;
+}
+
 @media (max-width: 768px) {  
   .menu-container {  
       justify-content: space-around;  
