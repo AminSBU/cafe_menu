@@ -32,7 +32,8 @@
   display: flex;        
   flex-wrap: wrap;     /* Allow wrapping for smaller screens */  
   border: 1px solid #ccc;  
-  margin-top: 10px;  
+  margin-top: 10px;
+  border-radius: 10px;
 }  
 
 /* Responsive columns: stack vertically on smaller screens */  
