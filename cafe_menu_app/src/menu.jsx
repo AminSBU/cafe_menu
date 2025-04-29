@@ -30,12 +30,20 @@ const Menu = () => {
                         <div className="row no-border">  
                             <div className="inner-column"><img src='./src/img/glass-cafe.jpg'></img></div>  
                             <div className="inner-column">کافی گلاسه: شیر، قهوه، شکر، بستنی وانیلی، پودر کاکائو، خامه، شکلات تکه ای</div>  
-                        </div>  
+                        </div>
+                        
+                        <div className='addToCardButton'>
+                            <button className='addCardButton'>Add</button>
+                        </div>
                     </div>  
                     <div class="row">
                         <div className="row no-border">  
                             <div className="inner-column"><img src='./src/img/Mooka-cafe.jpeg'></img></div>  
                             <div className="inner-column">موکا: فوم شیر، شیر داغ، اسپرسو، سس شکلات</div>  
+                        </div>
+                        
+                        <div className='addToCardButton'>
+                            <button className='addCardButton'>Add</button>
                         </div>
                     </div>  
                     <div class="row">
@@ -54,11 +62,19 @@ const Menu = () => {
                             <div className="inner-column"><img src='./src/img/makiato-cafe.jpeg'></img></div>  
                             <div className="inner-column">ماکیاتو: قوه اسپرسو، شیر کف داده</div>  
                         </div>  
+                        
+                        <div className='addToCardButton'>
+                            <button className='addCardButton'>Add</button>
+                        </div>
                     </div>  
                     <div class="row">
                         <div className="row no-border">  
                             <div className="inner-column"><img src='./src/img/Mooka-cafe.jpeg'></img></div>  
                             <div className="inner-column">موکا: فوم شیر، شیر داغ، اسپرسو، سس شکلات</div>  
+                        </div>
+                        
+                        <div className='addToCardButton'>
+                            <button className='addCardButton'>Add</button>
                         </div>
                     </div>  
                     <div class="row">
