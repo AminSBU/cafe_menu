@@ -83,6 +83,34 @@ img {
   margin-left: 10px;
 }
 
+.inner-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align text to the start (right for RTL) */
+  text-align: right;       /* since your text is Persian */
+  margin: 0 10px;
+}
+
+/* Title style */
+.inner-column h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Description style */
+.inner-column p {
+  font-size: 0.9em;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+/* Price style */
+.price {
+  font-weight: bold;
+  color: #222;
+  font-size: 1.1em;
+}
+
 @media (max-width: 768px) {  
   .menu-container {  
       justify-content: space-around;  

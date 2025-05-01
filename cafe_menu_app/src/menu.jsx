@@ -31,9 +31,7 @@ const Menu = () => {
                         <span className="icon">{item.icon}</span>  
                         <span className="label">{item.label}</span>  
                     </div>  
-                ))}  
-                <div className="arrow left">&lt;</div>  
-                <div className="arrow right">&gt;</div>  
+                ))} 
             </div>  
 
             <div className='menu-list'>  
@@ -72,10 +70,16 @@ const Menu = () => {
                 </div>  
                 <div className='column'>  
                 <div className="row">  
-                        <div className="row no-border">  
-                            <div className="inner-column"><img src='./src/img/makiato-cafe.jpeg' alt="ماکیاتو" /></div>  
-                            <div className="inner-column"><h3>ماکیاتو</h3>قوه اسپرسو، شیر کف داده</div>  
-                        </div>  
+                <div className="row no-border">
+                    <div className="inner-column image-column">
+                        <img src='./src/img/Mooka-cafe.jpeg' alt="موکا" />
+                        </div>
+                            <div className="inner-column">
+                            <h3>موکا</h3>
+                            <p>فوم شیر، شیر داغ، اسپرسو، سس شکلات</p>
+                            <div className="price">245,000 تومان</div>
+                        </div>
+                    </div>  
                         
                         <div className='addToCardButton'>  
                             {counts['makiato-cafe'] || 0}  
@@ -85,7 +89,7 @@ const Menu = () => {
                     <div className="row">  
                         <div className="row no-border">  
                             <div className="inner-column"><img src='./src/img/Mooka-cafe.jpeg' alt="موکا" /></div>  
-                            <div className="inner-column"><h3>موکا</h3>فوم شیر، شیر داغ، اسپرسو، سس شکلات</div>  
+                            <div className="inner-column"><h3 className='hClass'>موکا</h3>فوم شیر، شیر داغ، اسپرسو، سس شکلات</div>  
                         </div>  
                         
                         <div className='addToCardButton'>  
