@@ -1,4 +1,5 @@
-import './menu.css'
+import React, { useState } from 'react';  
+import './menu.css'  
 
 const Menu = () => {  
     const menuItems = [  
@@ -10,8 +11,19 @@ const Menu = () => {
         { icon: '🥗', label: 'سالاد' },  
         { icon: '🍳', label: 'صبحانه' },  
     ];  
+    
+    // Object to keep count per item identified by keys  
+    const [counts, setCounts] = useState({});  
 
-    return (
+    // Increment function for a given key  
+    const incrementCount = (key) => {  
+        setCounts(prev => ({  
+            ...prev,  
+            [key]: (prev[key] || 0) + 1  
+        }));  
+    };  
+  
+    return (  
         <>  
             <div className="menu-container">  
                 {menuItems.map((item, index) => (  
@@ -22,74 +34,78 @@ const Menu = () => {
                 ))}  
                 <div className="arrow left">&lt;</div>  
                 <div className="arrow right">&gt;</div>  
-            </div>
+            </div>  
 
-            <div className='menu-list'>
-                <div className='column'>
-                    <div class="row">
+            <div className='menu-list'>  
+                <div className='column'>  
+                    <div className="row">  
                         <div className="row no-border">  
-                            <div className="inner-column"><img src='./src/img/glass-cafe.jpg'></img></div>  
-                            <div className="inner-column">کافی گلاسه: شیر، قهوه، شکر، بستنی وانیلی، پودر کاکائو، خامه، شکلات تکه ای</div>  
-                        </div>
-                        
-                        <div className='addToCardButton'>
-                            <button className='addCardButton'>Add</button>
-                        </div>
-                    </div>  
-                    <div class="row">
-                        <div className="row no-border">  
-                            <div className="inner-column"><img src='./src/img/Mooka-cafe.jpeg'></img></div>  
-                            <div className="inner-column">موکا: فوم شیر، شیر داغ، اسپرسو، سس شکلات</div>  
-                        </div>
-                        
-                        <div className='addToCardButton'>
-                            <button className='addCardButton'>Add</button>
-                        </div>
-                    </div>  
-                    <div class="row">
-                        Row 3 in Column 1
-                    </div>  
-                    <div class="row">
-                        Row 4 in Column 1
-                    </div>  
-                    <div class="row">
-                        Row 5 in Column 1
-                    </div>  
-                </div>  
-                <div className='column'>
-                <div class="row">
-                        <div className="row no-border">  
-                            <div className="inner-column"><img src='./src/img/makiato-cafe.jpeg'></img></div>  
-                            <div className="inner-column">ماکیاتو: قوه اسپرسو، شیر کف داده</div>  
+                            <div className="inner-column"><img src='./src/img/glass-cafe.jpg' alt="کافی گلاسه" /></div> 
+                            <div className="inner-column"><h3>کافه گلاسه</h3>شیر، قهوه، شکر، بستنی وانیلی، پودر کاکائو، خامه، شکلات تکه ای</div>  
                         </div>  
                         
-                        <div className='addToCardButton'>
-                            <button className='addCardButton'>Add</button>
-                        </div>
+                        <div className='addToCardButton'>  
+                            {counts['glass-cafe'] || 0}  
+                            <button className='addCardButton' onClick={() => incrementCount('glass-cafe')} >Add</button>  
+                        </div>  
                     </div>  
-                    <div class="row">
+                    <div className="row">  
                         <div className="row no-border">  
-                            <div className="inner-column"><img src='./src/img/Mooka-cafe.jpeg'></img></div>  
-                            <div className="inner-column">موکا: فوم شیر، شیر داغ، اسپرسو، سس شکلات</div>  
-                        </div>
+                            <div className="inner-column"><img src='./src/img/Mooka-cafe.jpeg' alt="موکا" /></div>  
+                            <div className="inner-column"><h3>موکا</h3>فوم شیر، شیر داغ، اسپرسو، سس شکلات</div>  
+                        </div>  
                         
-                        <div className='addToCardButton'>
-                            <button className='addCardButton'>Add</button>
-                        </div>
+                        <div className='addToCardButton'>  
+                            {counts['mooka-cafe'] || 0}  
+                            <button className='addCardButton' onClick={() => incrementCount('mooka-cafe')} >Add</button>  
+                        </div>  
                     </div>  
-                    <div class="row">
-                        Row 3 in Column 1
+                    <div className="row">  
+                        Row 3 in Column 1  
                     </div>  
-                    <div class="row">
-                        Row 4 in Column 1
+                    <div className="row">  
+                        Row 4 in Column 1  
                     </div>  
-                    <div class="row">
-                        Row 5 in Column 1
+                    <div className="row">  
+                        Row 5 in Column 1  
+                    </div>  
+                </div>  
+                <div className='column'>  
+                <div className="row">  
+                        <div className="row no-border">  
+                            <div className="inner-column"><img src='./src/img/makiato-cafe.jpeg' alt="ماکیاتو" /></div>  
+                            <div className="inner-column"><h3>ماکیاتو</h3>قوه اسپرسو، شیر کف داده</div>  
+                        </div>  
+                        
+                        <div className='addToCardButton'>  
+                            {counts['makiato-cafe'] || 0}  
+                            <button className='addCardButton' onClick={() => incrementCount('makiato-cafe')} >Add</button>  
+                        </div>  
+                    </div>  
+                    <div className="row">  
+                        <div className="row no-border">  
+                            <div className="inner-column"><img src='./src/img/Mooka-cafe.jpeg' alt="موکا" /></div>  
+                            <div className="inner-column"><h3>موکا</h3>فوم شیر، شیر داغ، اسپرسو، سس شکلات</div>  
+                        </div>  
+                        
+                        <div className='addToCardButton'>  
+                            {counts['mooka-cafe-2'] || 0}  
+                            <button className='addCardButton' onClick={() => incrementCount('mooka-cafe-2')} >Add</button>  
+                        </div>  
+                    </div>  
+                    <div className="row">  
+                        Row 3 in Column 1  
+                    </div>  
+                    <div className="row">  
+                        Row 4 in Column 1  
+                    </div>  
+                    <div className="row">  
+                        Row 5 in Column 1  
                     </div>    
-                </div>
-            </div>
-        </>
+                </div>  
+            </div>  
+        </>  
     );  
-};
+};  
 
-export default Menu;
+export default Menu;  
